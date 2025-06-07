@@ -29,12 +29,12 @@ COPY . .
 RUN python -c "import flask; print(f'Flask version: {flask.__version__}')"
 
 # Порт и команда запуска
-EXPOSE 8080
+EXPOSE 5050
 CMD ["python", "sample_app.py"]
 EOF
 
 # Собираем и запускаем контейнер
 cd tempdir
 docker build -t sampleapp .
-docker run -d -p 8080:8080 --name sampleruntst sampleapp
+docker run -d -p 5050:5050 --name sampleruntst sampleapp
 docker ps -a

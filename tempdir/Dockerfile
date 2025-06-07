@@ -13,5 +13,5 @@ COPY . .
 RUN python -c "import flask; print(f'Flask version: {flask.__version__}')"
 
 # Порт и команда запуска
-EXPOSE 8080
+EXPOSE 5050
 CMD ["python", "sample_app.py"]
